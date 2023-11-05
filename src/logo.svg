@@ -1,0 +1,45 @@
+// GroupingOrderingDropdown.js
+        import React from 'react';
+
+        const GroupingOrderingDropdown = ({ onGroupChange, onSortChange }) => {
+        return (
+<div className="dropdown">
+    <button className="dropdown-toggle" data-toggle="dropdown">
+        Grouping
+    </button>
+    <ul className="dropdown-menu">
+        <li className="dropdown-submenu">
+            <button className="dropdown-toggle" data-toggle="dropdown">
+                By
+            </button>
+            <ul className="dropdown-menu">
+            <li>
+                <button onClick={() => onGroupChange('status')}>Status</button>
+        </li>
+        <li>
+            <button onClick={() => onGroupChange('user')}>User</button>
+    </li>
+    <li>
+        <button onClick={() => onGroupChange('priority')}>Priority</button>
+</li>
+        </ul>
+        </li>
+<li className="dropdown-submenu">
+<button className="dropdown-toggle" data-toggle="dropdown">
+    Ordering
+</button>
+<ul className="dropdown-menu">
+<li>
+    <button onClick={() => onSortChange('priority')}>Priority</button>
+</li>
+<li>
+<button onClick={() => onSortChange('title')}>Title</button>
+        </li>
+        </ul>
+        </li>
+        </ul>
+        </div>
+        );
+        };
+
+        export default GroupingOrderingDropdown;
